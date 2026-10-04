@@ -1,0 +1,8 @@
+Computer says no by Christian Munk
+https://fontstruct.com/fontstructions/show/954016
+Creative Commons Attribution-ShareAlike 3.0
+https://creativecommons.org/licenses/by-sa/3.0/
+The downloaded WOFF2 font is unchanged. See COMPUTER-SAYS-NO-LICENSE.txt.
+
+Nimbus Sans Narrow is the temporary heading fallback. See LICENSE.txt.
+Helvetica Now Condensed is requested through local font lookup only; no Monotype font file is bundled.
