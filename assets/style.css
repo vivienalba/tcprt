@@ -268,3 +268,9 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 @media(max-width:760px){.object-car{left:25%;top:-6%;width:108px}.credentials-gummy{width:66px}.car-navigation-content{padding:20px 24px 24px}}
 @media(max-width:460px){.object-car{left:25%;top:-6%;width:96px}.credentials-gummy{width:60px}.inquiry-email{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.car-navigation nav a{transition:none}.car-navigation nav a:hover{transform:none}}
+/* Mobile earphones, kept clear of the Tools & Technologies heading. */
+.mobile-tools-earbuds{display:none}
+@media(max-width:760px){
+  .tools .section-heading{position:relative}
+  .mobile-tools-earbuds{display:block;position:absolute;right:8px;top:-88px;width:76px;height:76px;object-fit:contain;transform:rotate(-10deg);pointer-events:none}
+}
