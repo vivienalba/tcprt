@@ -255,7 +255,7 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .object-car{left:38%;top:63%;width:clamp(140px,17vw,220px);--angle:-4deg}
 .object-car .object-art img{width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
 .credentials .section-heading{position:relative}
-.credentials-gummy{position:absolute;right:0;top:0;width:100px;height:auto;transform:rotate(7deg);pointer-events:none}
+.credentials-gummy{position:absolute;right:0;top:auto;bottom:4px;width:100px;height:auto;transform:rotate(7deg);pointer-events:none}
 .inquiry-email{display:inline-block;margin-top:14px;font:25px/1.2 var(--mono);overflow-wrap:anywhere;color:var(--ink);transition:color 160ms ease}
 .inquiry-email:hover{color:#88396f}
 .car-navigation{width:min(440px,calc(100% - 36px));max-width:440px}
@@ -265,6 +265,6 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .car-navigation nav a{display:block;padding:10px 0;font:25px/1.1 var(--mono);transition:color 160ms ease,transform 180ms ease}
 .car-navigation nav a:hover{color:#88396f;transform:translateX(3px)}
 .car-navigation nav a:active{transform:translateX(1px)}
-@media(max-width:760px){.object-car{left:25%;top:-6%;width:108px}.credentials-gummy{width:66px;top:-12px}.car-navigation-content{padding:20px 24px 24px}}
-@media(max-width:460px){.object-car{left:25%;top:-6%;width:96px}.credentials-gummy{width:60px;top:-14px}.inquiry-email{font-size:25px}}
+@media(max-width:760px){.object-car{left:25%;top:-6%;width:108px}.credentials-gummy{width:66px}.car-navigation-content{padding:20px 24px 24px}}
+@media(max-width:460px){.object-car{left:25%;top:-6%;width:96px}.credentials-gummy{width:60px}.inquiry-email{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.car-navigation nav a{transition:none}.car-navigation nav a:hover{transform:none}}
