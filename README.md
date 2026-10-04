@@ -105,4 +105,4 @@ Mouse and touch visitors can drag the desk objects. A short tap opens the associ
 
 The original visual design and page copy are preserved. No underlines, motion switch, project arrows, scroll progress bar, or visible carousel scrollbar have been reintroduced. All 30 automated checks passed. Browser visual layout and physical device interaction could not be checked in this environment. Live inquiry activation and delivery remain subject to the activation steps above.
 
-The landing-page RB19 car opens a destination menu and supports the same drag, reset, hover, and reduced-motion behavior as the other desk objects. The cat appears beside Credentials. The inquiry email is also shown below the tagline.
+The landing-page RB19 car opens a destination menu and supports the same drag, reset, hover, and reduced-motion behavior as the other desk objects. The cat appears beside Projects, and the gummy bear beside Certificates & Credentials. The inquiry email is also shown below the tagline.

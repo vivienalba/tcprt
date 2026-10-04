@@ -72,9 +72,9 @@ html{scrollbar-gutter:stable}.desktop-nav{gap:19px}.desktop-nav a{font-size:20px
 
 /* Artwork from Vivien’s supplied collection. */
 .heading-clip{position:absolute;width:clamp(42px,5.2vw,72px);height:auto;top:-.28em;right:-.56em;pointer-events:none;filter:drop-shadow(1px 3px 2px #0002)}
-.work .section-heading{position:relative;padding-right:85px}.project-gummy{position:absolute;width:clamp(48px,5.3vw,74px);height:auto;right:12px;top:0;rotate:5deg;pointer-events:none;filter:drop-shadow(1px 4px 2px #0002)}
+.work .section-heading{position:relative;padding-right:85px}.project-cat{position:absolute;width:clamp(48px,5.3vw,74px);height:auto;right:12px;top:0;rotate:5deg;pointer-events:none;filter:drop-shadow(1px 4px 2px #0002)}
 .history-dog{width:145px;transform:rotate(-7deg)}
-@media(max-width:760px){.heading-clip{width:clamp(38px,8vw,58px);right:-.44em;top:-.3em}.history-dog{width:100px}.work .section-heading{padding-right:65px}.project-gummy{width:48px;right:0;top:4px}}
+@media(max-width:760px){.heading-clip{width:clamp(38px,8vw,58px);right:-.44em;top:-.3em}.history-dog{width:100px}.work .section-heading{padding-right:65px}.project-cat{width:48px;right:0;top:4px}}
 @media(max-width:460px){.history-dog{width:88px}}
 
 /* Requested typography: self-hosted Computer Says No and a local Helvetica
@@ -255,7 +255,7 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .object-car{left:38%;top:63%;width:clamp(140px,17vw,220px);--angle:-4deg}
 .object-car .object-art img{width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
 .credentials .section-heading{position:relative}
-.credentials-cat{position:absolute;right:0;top:0;width:100px;height:auto;transform:rotate(7deg);pointer-events:none}
+.credentials-gummy{position:absolute;right:0;top:0;width:100px;height:auto;transform:rotate(7deg);pointer-events:none}
 .inquiry-email{display:inline-block;margin-top:14px;font:25px/1.2 var(--mono);overflow-wrap:anywhere;color:var(--ink);transition:color 160ms ease}
 .inquiry-email:hover{color:#88396f}
 .car-navigation{width:min(440px,calc(100% - 36px));max-width:440px}
@@ -265,6 +265,6 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .car-navigation nav a{display:block;padding:10px 0;font:25px/1.1 var(--mono);transition:color 160ms ease,transform 180ms ease}
 .car-navigation nav a:hover{color:#88396f;transform:translateX(3px)}
 .car-navigation nav a:active{transform:translateX(1px)}
-@media(max-width:760px){.object-car{left:25%;top:-6%;width:108px}.credentials-cat{width:66px;top:-12px}.car-navigation-content{padding:20px 24px 24px}}
-@media(max-width:460px){.object-car{left:25%;top:-6%;width:96px}.credentials-cat{width:60px;top:-14px}.inquiry-email{font-size:25px}}
+@media(max-width:760px){.object-car{left:25%;top:-6%;width:108px}.credentials-gummy{width:66px;top:-12px}.car-navigation-content{padding:20px 24px 24px}}
+@media(max-width:460px){.object-car{left:25%;top:-6%;width:96px}.credentials-gummy{width:60px;top:-14px}.inquiry-email{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.car-navigation nav a{transition:none}.car-navigation nav a:hover{transform:none}}
