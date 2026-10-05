@@ -274,3 +274,7 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
   .tools .section-heading{position:relative}
   .mobile-tools-earbuds{display:block;position:absolute;right:8px;top:-88px;width:76px;height:76px;object-fit:contain;transform:rotate(-10deg);pointer-events:none}
 }
+
+/* Keep project close-button keyboard focus on the icon, rather than a full-width line. */
+.project-dialog .dialog-close:focus-visible{outline:none}
+.project-dialog .dialog-close:focus-visible span{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}
