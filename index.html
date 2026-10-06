@@ -12,6 +12,33 @@
   <link rel="preload" href="./assets/fonts/computer-says-no.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/style.css?v=credentials-inset-2">
   <script type="module" src="./assets/app.js?v=credentials-carousel-1"></script>
+  <style id="credentials-inset-styles">
+.credential-grid.credential-carousel{display:flex;width:100%;max-width:none;gap:24px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:2px;overscroll-behavior-x:contain;touch-action:pan-x pan-y;padding:8px 2px 12px;cursor:grab;min-width:0}
+.credential-carousel>.credential-card{flex:0 0 clamp(280px,calc((100% - 48px)/3),440px);min-width:0;scroll-snap-align:start;cursor:grab}
+.credential-carousel img{-webkit-user-drag:none;user-select:none}
+.credential-carousel.is-dragging{scroll-snap-type:none;cursor:grabbing;user-select:none}
+.credential-carousel.is-dragging *{cursor:grabbing!important;user-select:none}
+.credential-carousel:focus,.credential-carousel:focus-visible{outline:none}
+.credential-carousel:focus-visible .credential-bottom{color:#88396f}
+@media(max-width:760px){.credential-grid.credential-carousel{gap:20px}.credential-carousel>.credential-card{flex-basis:min(360px,calc(100% - 28px))}}
+
+/* Inset credentials panel: retain the existing cards and horizontal carousel. */
+#certificates.credentials{background-color:var(--paper);padding:28px clamp(16px,2.4vw,38px) 36px;--grid:#3d3d3d}
+#certificates .credentials-inset{background-color:#000000;color:#f1eee7;border-radius:20px;padding:26px clamp(18px,2vw,32px) 22px;min-width:0;overflow:hidden}
+.credentials .credentials-inset .section-heading{border-top:0;padding-top:0;margin-bottom:18px}
+@media(max-width:760px){
+ #certificates.credentials{padding:18px 12px 24px}
+ #certificates .credentials-inset{border-radius:16px;padding:22px 16px 18px}
+ .credentials .credentials-inset .section-heading{margin-bottom:16px}
+}
+
+.credentials .credentials-inset .section-heading h2{font-size:48px}
+.credentials-inset .credentials-gummy{width:72px}
+@media(max-width:760px){.credentials .credentials-inset .section-heading h2{font-size:40px}.credentials-inset .credentials-gummy{width:52px}}
+
+#certificates{background-image:none;background-color:#f6f1f0}
+#certificates .credentials-inset{background-image:linear-gradient(#3d3d3d 1px,transparent 1px),linear-gradient(90deg,#3d3d3d 1px,transparent 1px);background-size:36px 36px;box-sizing:border-box}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
