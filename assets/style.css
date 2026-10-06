@@ -296,3 +296,17 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .credential-carousel:focus,.credential-carousel:focus-visible{outline:none}
 .credential-carousel:focus-visible .credential-bottom{color:#88396f}
 @media(max-width:760px){.credential-grid.credential-carousel{gap:20px}.credential-carousel>.credential-card{flex-basis:min(360px,calc(100% - 28px))}}
+
+/* Inset credentials panel: retain the existing cards and horizontal carousel. */
+.credentials{background-color:var(--paper);padding:28px clamp(16px,2.4vw,38px) 36px;--grid:#3d3d3d}
+.credentials-inset{background-color:#000000;color:#f1eee7;border-radius:20px;padding:26px clamp(18px,2vw,32px) 22px;min-width:0;overflow:hidden}
+.credentials .credentials-inset .section-heading{border-top:0;padding-top:0;margin-bottom:18px}
+@media(max-width:760px){
+ .credentials{padding:18px 12px 24px}
+ .credentials-inset{border-radius:16px;padding:22px 16px 18px}
+ .credentials .credentials-inset .section-heading{margin-bottom:16px}
+}
+
+.credentials .credentials-inset .section-heading h2{font-size:48px}
+.credentials-inset .credentials-gummy{width:72px}
+@media(max-width:760px){.credentials .credentials-inset .section-heading h2{font-size:40px}.credentials-inset .credentials-gummy{width:52px}}
