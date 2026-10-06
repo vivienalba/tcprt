@@ -135,7 +135,8 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 @media(max-width:760px){.section-heading h2,.experience .section-heading h2,.tools .section-heading h2,.credentials .section-heading h2,.contact h2{font-size:56px}.hero h1{font-size:clamp(64px,14vw,98px)}.history .experience-row h3{font-size:26px}.work{padding-top:44px;padding-bottom:44px}.project-grid.project-carousel{gap:18px}.project-carousel>.project{flex-basis:min(320px,calc(100% - 34px))}.project-carousel .project-caption h3{font-size:28px}.project-carousel .screenshot-cover{padding:17px}}
 @media(max-width:460px){.section-heading h2,.experience .section-heading h2,.tools .section-heading h2,.credentials .section-heading h2,.contact h2{font-size:52px}.hero h1{font-size:clamp(54px,14vw,64px)}.heading-clip{width:38px;right:-44px;top:-22px}}
 
-.project-carousel:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
+.project-carousel:focus,.project-carousel:focus-visible{outline:none}
+.project-carousel:focus-visible .project-tag{color:#4f183f}
 
 /* Larger fva mark with its star aligned beside the wordmark. */
 .site-header .wordmark{display:inline-flex;align-items:center;gap:5px;font-size:44px;line-height:1;letter-spacing:-.05em}
@@ -276,5 +277,12 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 }
 
 /* Keep project close-button keyboard focus on the icon, rather than a full-width line. */
-.project-dialog .dialog-close:focus-visible{outline:none}
-.project-dialog .dialog-close:focus-visible span{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}
+
+
+/* Hide scrollbar chrome while preserving mouse, touch, and keyboard scrolling. */
+*,*::before,*::after{scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}
+/* Keep close controls clean; indicate keyboard focus with the existing accent. */
+.dialog-close:focus,.dialog-close:focus-visible{outline:none;box-shadow:none}
+.dialog-close span,.dialog-close:focus-visible span{outline:none;box-shadow:none;border-radius:0}
+.dialog-close:focus-visible{color:#88396f}

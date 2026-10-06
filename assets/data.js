@@ -1,4 +1,5 @@
 export const projects = {
+  websiteqc: {"title": "Lintel: A website checker tool", "eyebrow": "TOOLS / LINTEL", "category": "Review website quality and find practical fixes.", "description": "A Python powered tool that checks website quality and turns detected issues into clear findings, practical fixes, and downloadable reports.", "problem": "Website issues can be difficult to spot and organize without a structured review.", "approach": "Checks website quality and presents findings in a dashboard with evidence and practical recommendations.", "details": ["Website quality checks and categorized findings", "Accessibility signals and technical issue review", "Practical recommendations for reviewing and improving a website"], "tools": ["Python", "JavaScript", "Website Auditing", "UI/UX Design", "Automation", "Accessibility"], "status": "INDEPENDENT PROJECT", "image": "lintel", "imagePath": "./assets/current/lintel.png", "imageAlt": "Screenshot of Lintel website quality checker", "link": "https://websiteqc.streamlit.app", "linkLabel": "Open Lintel"},
   tidygrid: {
     title:'Data Cleaning & Standardization Tool',eyebrow:'TOOLS / TIDYGRID',category:'Business data, ready for the next step.',
     description:'A Python and Streamlit application that automates repetitive data cleaning tasks, transforming messy records into standardized, ready to use business data.',
@@ -6,7 +7,7 @@ export const projects = {
     approach:'A guided upload, review, clean, and download process for CSV and Excel files, including multi-sheet workbooks. Users can choose cleanup options and review the result before using it in a business workflow.',
     details:['Standardized formatting and duplicate cleanup','Missing-data review before export','Downloadable results for reporting and operational workflows'],
     tools:['Python','Streamlit','Pandas','Data Cleaning','Data Automation','Excel'],status:'INDEPENDENT PROJECT',demo:true,
-    image:'tidygrid',link:'https://vivsopscleaner.streamlit.app/#welcome-to-vivs-operations-cleaner',linkLabel:'Open the data cleaning tool'
+    image:'tidygrid',imagePath:'./assets/current/tidygrid-preview.png',imageAlt:'Screenshot of TidyGrid data workspace',link:'https://tidygrid.streamlit.app/#import-dataset',linkLabel:'Open the data cleaning tool'
   },
   websites: {
     title:'Hella Nails Website',eyebrow:'WEBSITE CONCEPT / SERVICE BUSINESS',category:'Your colour. Your details.',

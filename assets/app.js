@@ -1,5 +1,5 @@
 import * as Anime from './vendor/anime.esm.min.js';
-import {projects, sampleRows, cleanSample} from './data.js';
+import {projects, sampleRows, cleanSample} from './data.js?v=lintel-2';
 import {initProjectCarousel} from './carousel.js';
 import {initInquiryForm} from './inquiry.js';
 import {initPortfolioMotion,initMotionMenu} from './motion.js';
@@ -98,7 +98,7 @@ export function initPortfolio({doc=document,win=window,anime=Anime}={}) {
     const p=projects[id];if(!p)return;
     $('#dialog-content').innerHTML=`
       <div class="dialog-head"><span class="micro-label">PROJECT / ${escapeHTML(p.eyebrow)}</span><h2 id="dialog-title">${escapeHTML(p.title)}</h2><p class="dialog-subtitle">${escapeHTML(p.category)}</p><p class="dialog-status">${escapeHTML(p.status)}</p></div>
-      <div class="dialog-body"><a class="case-screenshot" href="./assets/current/${p.image}.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full screenshot of ${escapeHTML(p.title)}"><img src="./assets/current/${p.image}.webp" alt="Screenshot of ${escapeHTML(p.title)}"><span>OPEN FULL PREVIEW ↗</span></a><p class="dialog-description">${escapeHTML(p.description)}</p>
+      <div class="dialog-body"><a class="case-screenshot" href="${escapeHTML(p.imagePath || `./assets/current/${p.image}.webp`)}" target="_blank" rel="noopener noreferrer" aria-label="Open full preview of ${escapeHTML(p.title)}"><img src="${escapeHTML(p.imagePath || `./assets/current/${p.image}.webp`)}" alt="${escapeHTML(p.imageAlt || `Screenshot of ${p.title}`)}"><span>OPEN FULL PREVIEW ↗</span></a><p class="dialog-description">${escapeHTML(p.description)}</p>
       <div class="case-columns"><div><h3>The Context</h3><p>${escapeHTML(p.problem)}</p></div><div><h3>The Approach</h3><p>${escapeHTML(p.approach)}</p></div></div>
       <div class="case-details"><h3>A Few Details</h3><ul>${p.details.map(d=>`<li>${escapeHTML(d)}</li>`).join('')}</ul></div><div class="case-tools">${p.tools.map(t=>`<span>${escapeHTML(t)}</span>`).join('')}</div>
       ${p.demo?renderDemo():''}${p.link?`<a class="text-link dialog-link" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.linkLabel)} <span aria-hidden="true">↗</span></a>`:''}</div>`;
