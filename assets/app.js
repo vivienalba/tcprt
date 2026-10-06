@@ -138,7 +138,7 @@ export function initPortfolio({doc=document,win=window,anime=Anime}={}) {
   }
 
   const projectCarousel=initProjectCarousel($('#project-carousel'),{win,getMotion:()=>motion});
-  const credentialCarousel=initProjectCarousel($('#credential-carousel'),{win,getMotion:()=>motion,cardClass:'credential-card'});
+
   const cards=$$('.project'),filters=$$('[data-filter]');
   filters.forEach(button=>button.addEventListener('click',()=>{
     filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
