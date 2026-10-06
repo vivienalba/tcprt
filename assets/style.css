@@ -286,3 +286,13 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .dialog-close:focus,.dialog-close:focus-visible{outline:none;box-shadow:none}
 .dialog-close span,.dialog-close:focus-visible span{outline:none;box-shadow:none;border-radius:0}
 .dialog-close:focus-visible{color:#88396f}
+
+/* Certificates use the same touch, drag, and keyboard browsing as Projects. */
+.credential-grid.credential-carousel{display:flex;width:100%;max-width:880px;gap:24px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:2px;overscroll-behavior-x:contain;touch-action:pan-x pan-y;padding:8px 2px 12px;cursor:grab;min-width:0}
+.credential-carousel>.credential-card{flex:0 0 calc((100% - 24px)/2);min-width:0;scroll-snap-align:start;cursor:grab}
+.credential-carousel img{-webkit-user-drag:none;user-select:none}
+.credential-carousel.is-dragging{scroll-snap-type:none;cursor:grabbing;user-select:none}
+.credential-carousel.is-dragging *{cursor:grabbing!important;user-select:none}
+.credential-carousel:focus,.credential-carousel:focus-visible{outline:none}
+.credential-carousel:focus-visible .credential-bottom{color:#88396f}
+@media(max-width:760px){.credential-grid.credential-carousel{gap:20px}.credential-carousel>.credential-card{flex-basis:min(360px,calc(100% - 28px))}}

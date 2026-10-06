@@ -1,4 +1,4 @@
-export function initProjectCarousel(rail, {win=globalThis, previous, next, getMotion=()=>true}={}) {
+export function initProjectCarousel(rail, {win=globalThis, previous, next, getMotion=()=>true,cardClass='project'}={}) {
   const listeners=[];
   let drag=null, suppressClick=false, clickTimer, refreshFrame;
   const listen=(target,type,handler,options)=>{
@@ -11,7 +11,7 @@ export function initProjectCarousel(rail, {win=globalThis, previous, next, getMo
     if(next)next.disabled=rail.scrollLeft>=maxScroll()-2;
   }
   function step(){
-    const card=Array.from(rail.children).find(child=>child.classList.contains('project')&&!child.hidden);
+    const card=Array.from(rail.children).find(child=>child.classList.contains(cardClass)&&!child.hidden);
     const gap=parseFloat(win.getComputedStyle?.(rail).columnGap)||24;
     return card?card.offsetWidth+gap:rail.clientWidth;
   }

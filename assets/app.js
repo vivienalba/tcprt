@@ -1,6 +1,6 @@
 import * as Anime from './vendor/anime.esm.min.js';
 import {projects, sampleRows, cleanSample} from './data.js?v=lintel-2';
-import {initProjectCarousel} from './carousel.js';
+import {initProjectCarousel} from './carousel.js?v=credentials-carousel-1';
 import {initInquiryForm} from './inquiry.js';
 import {initPortfolioMotion,initMotionMenu} from './motion.js';
 import {initDesk} from './desk.js';
@@ -138,6 +138,7 @@ export function initPortfolio({doc=document,win=window,anime=Anime}={}) {
   }
 
   const projectCarousel=initProjectCarousel($('#project-carousel'),{win,getMotion:()=>motion});
+  const credentialCarousel=initProjectCarousel($('#credential-carousel'),{win,getMotion:()=>motion,cardClass:'credential-card'});
   const cards=$$('.project'),filters=$$('[data-filter]');
   filters.forEach(button=>button.addEventListener('click',()=>{
     filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
