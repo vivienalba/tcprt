@@ -1,5 +1,5 @@
 import * as Anime from './vendor/anime.esm.min.js';
-import {projects, sampleRows, cleanSample} from './data.js?v=lintel-2';
+import {projects, sampleRows, cleanSample} from './data.js?v=copy-clean-1';
 import {initProjectCarousel} from './carousel.js?v=credentials-carousel-1';
 import {initInquiryForm} from './inquiry.js';
 import {initPortfolioMotion,initMotionMenu} from './motion.js';
@@ -11,26 +11,26 @@ const email='vivienalba1016@gmail.com';
 export const policies={
   privacy:{title:'Privacy Policy',paragraphs:[
     'This portfolio does not require an account or use analytics or advertising trackers.',
-    'When you submit an inquiry, your name, email address, message, and consent are sent to FormSubmit for delivery to Vivien Alba’s email inbox. These details are used to respond to your inquiry and are not added to a marketing list.',
-    'FormSubmit processes submissions and says it retains them for 30 days. Its own privacy terms apply. Email providers may also process delivered inquiries. Please avoid sharing sensitive information in the form. For access or deletion requests, contact Vivien at '+email+'.',
-    'The data-cleaning demonstration uses a fixed fictional sample inside your browser. It does not send sample data to a server.',
+    'When you submit an inquiry, your name, email address, message, and consent are sent to FormSubmit for delivery to the portfolio owner’s email inbox. These details are used to respond to your inquiry and are not added to a marketing list.',
+    'FormSubmit processes submissions and says it retains them for 30 days. Its own privacy terms apply. Email providers may also process delivered inquiries. Please avoid sharing sensitive information in the form. For access or deletion requests, email '+email+'.',
+    'The data cleaning demonstration uses a fixed fictional sample inside your browser. It does not send sample data to a server.',
     'External project, certificate, and social links are governed by those services’ own policies.',
     'The hosting service may process technical information needed to deliver and protect the website, including connection and access information. For privacy questions, email '+email+'.'
   ]},
   terms:{title:'Terms & Conditions',paragraphs:[
-    'This website presents Vivien Alba’s professional work and experience. Project previews and descriptions provide information about the work; they do not create a service contract.',
-    'The small data-cleaning demo is illustrative and limited to the supplied sample. Review output from the full application before using it in a live business workflow.',
-    'External projects and services may change or become unavailable. Brand names and third-party trademarks belong to their respective owners. Any professional engagement will have its own agreed scope and terms.',
+    'This website presents professional work and experience. Project previews and descriptions provide information about the work; they do not create a service contract.',
+    'The small data cleaning demo is illustrative and limited to the supplied sample. Review output from the full application before using it in a live business workflow.',
+    'External projects and services may change or become unavailable. Brand names and third party trademarks belong to their respective owners. Any professional engagement will have its own agreed scope and terms.',
     'For project inquiries and opportunities, email '+email+'.'
   ]},
   cookies:{title:'Cookie Policy',paragraphs:[
     'The portfolio code does not set advertising or analytics cookies.',
     'Essential hosting or access controls may be managed by the hosting service.',
-    'No external contact-form scripts are loaded. With JavaScript enabled, inquiry submissions are sent to FormSubmit without including provider cookies. Without JavaScript, the form opens FormSubmit’s confirmation page, where its own cookie practices apply. Links to external services may also open websites that use their own cookies.'
+    'No external contact form scripts are loaded. With JavaScript enabled, inquiry submissions are sent to FormSubmit without including provider cookies. Without JavaScript, the form opens FormSubmit’s confirmation page, where its own cookie practices apply. Links to external services may also open websites that use their own cookies.'
   ]},
   refunds:{title:'Refund Policy',paragraphs:[
     'This portfolio does not take payments or sell products. No purchase is made through the website, so there is no website checkout to refund.',
-    'If you agree to a paid project with Vivien Alba, payment, cancellation, and refund terms will be agreed separately in writing before work begins.'
+    'If you agree to a paid project through this portfolio, payment, cancellation, and refund terms will be agreed separately in writing before work begins.'
   ]}
 };
 
@@ -112,7 +112,7 @@ export function initPortfolio({doc=document,win=window,anime=Anime}={}) {
   }));
   $$('[data-policy]').forEach(element=>element.addEventListener('click',event=>{
     event.preventDefault();const p=policies[element.dataset.policy];
-    $('#policy-content').innerHTML=`<div class="policy-content"><span class="micro-label">VIVIEN ALBA / WEBSITE INFORMATION</span><h2 id="policy-title">${escapeHTML(p.title)}</h2>${p.paragraphs.map(t=>`<p>${escapeHTML(t)}</p>`).join('')}${element.dataset.policy==='privacy'?'<p><a class="text-link" href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit privacy terms ↗</a></p>':''}<a class="text-link" href="mailto:${email}">Contact Vivien ↗</a></div>`;openDialog(policyDialog);
+    $('#policy-content').innerHTML=`<div class="policy-content"><span class="micro-label">WEBSITE INFORMATION</span><h2 id="policy-title">${escapeHTML(p.title)}</h2>${p.paragraphs.map(t=>`<p>${escapeHTML(t)}</p>`).join('')}${element.dataset.policy==='privacy'?'<p><a class="text-link" href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit privacy terms ↗</a></p>':''}<a class="text-link" href="mailto:${email}">Contact ↗</a></div>`;openDialog(policyDialog);
   }));
   function renderDemo(){return `<section class="demo" aria-labelledby="demo-title"><div class="demo-heading"><div><h3 id="demo-title">A Little Live Demonstration</h3><p>FOUR SAMPLE ROWS. A FEW FAMILIAR PROBLEMS.</p></div><button class="demo-button" id="clean-demo">Clean the sample ↗</button></div><div class="demo-table-wrap"><table><caption class="sr-only">Illustrative customer data. This is a fixed fictional sample.</caption><thead><tr><th scope="col">Name</th><th scope="col">Email</th><th scope="col">Status</th></tr></thead><tbody id="demo-rows">${tableRows(sampleRows,true)}</tbody></table></div><p class="demo-result" aria-live="polite">Before: inconsistent spaces, mixed email capitalization, one repeated row, and a missing email.</p><div class="demo-actions"><button class="demo-reset" id="reset-demo">Reset the sample ↺</button><button class="demo-button" id="download-demo" hidden>Download sample CSV ↓</button></div><p class="demo-note">An illustrative browser demo using fictional records. The full Python application handles uploaded files and more cleanup options. Missing information stays flagged for review.</p></section>`;}
   function tableRows(rows,before=false){return rows.map((r,i)=>`<tr class="${before&&i===2?'duplicate':''}"><td>${escapeHTML(r.name)}</td><td>${r.email?escapeHTML(r.email):'<span style="color:#8c522b">Missing email</span>'}</td><td>${escapeHTML(r.status)}</td></tr>`).join('');}

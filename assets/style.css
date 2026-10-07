@@ -310,3 +310,11 @@ p,.hero-aside p,.project-current .project-caption p,.history .experience-row sum
 .credentials .credentials-inset .section-heading h2{font-size:48px}
 .credentials-inset .credentials-gummy{width:72px}
 @media(max-width:760px){.credentials .credentials-inset .section-heading h2{font-size:40px}.credentials-inset .credentials-gummy{width:52px}}
+
+/* Clean modal surface; no offset black rectangle on mobile or desktop. */
+dialog{box-shadow:none}
+/* Touch browsers should not composite drop shadows over transformed artwork. */
+@media(hover:none),(max-width:760px){
+ .object-art,.desk-object:hover .object-art,.desk-object:focus-visible .object-art,
+ .object-fragile .object-art,.heading-clip,.project-cat{filter:none}
+}
